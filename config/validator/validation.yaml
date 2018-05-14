@@ -11,4 +11,4 @@ App\Entity\Device:
         longtitude:
             - App\Validator\Constraints\Longtitude: ~
         locationType:
-            - Choice: { choices: ['home', 'work'], message: Location type is invalid. }
+            - Choice: { choices: ['home', 'work'], message: 'Location type is invalid.' }
