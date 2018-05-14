@@ -12,3 +12,15 @@ admin:
 
 logout:
     path: /logout
+
+api.device:
+    path: /api/device/{deviceId}
+    controller: App\Controller\DeviceApiController::getById
+    defaults:
+          _format: json
+
+api.devices:
+    path: /api/devices
+    controller: App\Controller\DeviceApiController::getAll
+    defaults:
+          _format: json

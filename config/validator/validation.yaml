@@ -6,9 +6,5 @@ App\Entity\Device:
     properties:
         id:
             - NotBlank: ~
-        latitude:
-            - App\Validator\Constraints\Latitude: ~
-        longtitude:
-            - App\Validator\Constraints\Longtitude: ~
         locationType:
             - Choice: { choices: ['home', 'work'], message: 'Location type is invalid.' }

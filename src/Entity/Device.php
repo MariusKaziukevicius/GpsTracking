@@ -8,6 +8,7 @@ class Device
     private $latitude;
     private $longtitude;
     private $locationType;
+    private $address;
 
     public function getId(): string
     {
@@ -51,5 +52,27 @@ class Device
     {
         $this->locationType = $locationType;
         return $this;
+    }
+
+    public function getAddress(): string
+    {
+        return $this->address;
+    }
+
+    public function setAddress(string $address): Device
+    {
+        $this->address = $address;
+        return $this;
+    }
+
+    public function serialize(): array
+    {
+        return [
+            'id' => $this->id,
+            'latitude' => $this->latitude,
+            'longtitude' => $this->longtitude,
+            'locationType' => $this->locationType,
+            'address' => $this->address
+        ];
     }
 }

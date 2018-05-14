@@ -2,15 +2,17 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}GpsTracking{% endblock %}</title>
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('build/app.css') }}">
         {% endblock %}
+        {% block add_stylesheets %}{% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}
             <script src="{{ asset('build/app.js') }}"></script>
         {% endblock %}
+        {% block add_javascripts %}{% endblock %}
     </body>
 </html>
