@@ -58,6 +58,7 @@ Here's a few things this project still lacks and also a few thoughts/changes I w
  - Send an e-mail when added device is selected as "work".
  - Fix latitude and longtitude validation constraints. They currently exist in the project, but they've been disabled in the validator configuration, because some valid coordinates were being rejected.
  - Create a deeper folder structure for controllers/templates and etc., to separate different parts of the site and functionality.
+ - Add a Dockerfile for easy development environment setup.
  - Write unit tests.
 
 License
