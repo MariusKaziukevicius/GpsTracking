@@ -1,0 +1,14 @@
+App\Entity\Device:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [id]
+            message: 'Device ID already exists.'
+    properties:
+        id:
+            - NotBlank: ~
+        latitude:
+            - App\Validator\Constraints\Latitude: ~
+        longtitude:
+            - App\Validator\Constraints\Longtitude: ~
+        locationType:
+            - Choice: { choices: ['home', 'work'], message: Location type is invalid. }

@@ -1,5 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    Hello World!
+    {% if errors is defined %}
+        {% for error in errors %}
+            <li class="error-msg">{{ error.message }}</li>
+        {% endfor %}
+    {% endif %}
+    {{ form_start(device_form) }}
+    {{ form_widget(device_form) }}
+    {{ form_end(device_form) }}
 {% endblock %}
